@@ -130,15 +130,6 @@ button:not(:disabled):hover:after,
   width: 100%;
 }
 
-button:not(:disabled):active,
-.button:active {
-  color: #454138;
-}
-
-button:not(:disabled):active:after,
-.button:active:after {
-  background-color: #dcd8c0;
-}
 
 /*CSS made by me*/
 
@@ -173,14 +164,23 @@ a {
   text-decoration: none;
 }
 
-.content {
+div.content {
+  box-sizing: border-box;
   border: solid #454138;
   border-width: 0.1rem 0;
+  padding: 0.1rem 0;
+}
+
+.content {
   padding: 0.1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-image: url(img/NierAutomataPoster-Wide.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  background-origin: content-box;
+  height: 660px;
 }
 
 .content-box {
@@ -202,4 +202,73 @@ a {
   height: 480px;
   width: auto;
   margin: 40px 240px 40px 120px;
+}
+
+.playable-characters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playable-text {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 2.0rem;
+  background-color: #454138;
+  color: #bab5a1;
+}
+
+.characters-box {
+  display: flex;
+  align-items: center;
+  margin: 14px 240px;
+}
+
+.characters-display{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  margin: 0.2rem;
+}
+
+.characters-display:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  background: #454138;
+  z-index: -1;
+  transition: transform 0.3s;
+}
+
+.characters-display:hover::after {
+  transform: scaleY(1);
+}
+
+.characters-display:not(:disabled):hover,
+.characters-display:hover {
+  background-color: transparent;
+  color: #dcd8c0;
+}
+
+
+.character-middle {
+  border: solid #454138;
+  border-width: 0 0.1rem;
+  margin: -0.1rem;
+}
+
+.character-text {
+  text-align: center;
+}
+
+.character-image {
+ height: 600px;
 }
