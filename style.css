@@ -133,30 +133,39 @@ button:not(:disabled):hover:after,
 
 /*CSS made by me*/
 
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   display: flex;
   font-weight: lighter;
-  padding: 0.1rem 1rem;
   justify-content: space-between;
+  gap: 33%;
   align-items: center;
-  margin: 0px 240px;
+  padding: 0.1rem 1rem;
 
 }
 
 .header-logo {
-  height: 40px;
-  width: auto;
-
+  width: 100%;
+  max-width: 350px;
+  min-width: 200px;
+  margin-left: 10%;
 }
 
 ul {
   display: flex;
   list-style: none;
+  margin-right: 10%;
+  padding: 0;
 }
 
 li {
   margin: 0 0.6rem;
   font-size: 1.6rem;
+  padding: 0;
 }
 
 a {
@@ -175,18 +184,17 @@ div.content {
   padding: 0.1rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-image: url(img/NierAutomataPoster-Wide.jpg);
+  background-image: url(img/NierAutomataPoster-Cut2.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll; 
   background-origin: content-box;
-  height: 660px;
 }
 
 .content-box {
   display: flex;
   flex-direction: column;
-  margin: 40px 120px 40px 240px;
+  padding: 0.1rem 1rem;
+  margin: 12.5% 10%;
   width: 480px;
 }
 
@@ -221,7 +229,8 @@ div.content {
 .characters-box {
   display: flex;
   align-items: center;
-  margin: 14px 240px;
+  margin: 14px 240px 60px 240px;
+
 }
 
 .characters-display{
@@ -271,4 +280,79 @@ div.content {
 
 .character-image {
  height: 600px;
+}
+
+.quote {
+  border: solid #454138;
+  border-width: 0.1rem 0;
+  background: #e9e6d5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quote-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.quote-text {
+  width: 80%;
+  margin: 7.5% 0 0 0;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  margin: 0 10% 5% 0;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.action-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+}
+
+.action-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #454138;
+  width: 60%;
+  margin: 0 ;
+}
+
+.action-text {
+  margin: 5% 12.5%;
+  color: #d1cdb7;
+}
+
+.action-title {
+  margin-bottom: 0px;
+}
+
+.action-text p {
+  margin-top: 0px;
+}
+
+.action-button {
+  margin-right: 12.5%;
+}
+
+.footer {
+  background: #454138;
+  color: #dcd8c0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer p {
+  margin: 1.725% 0;
 }
